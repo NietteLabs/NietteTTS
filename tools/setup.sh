@@ -12,11 +12,11 @@ sudo apt-get install git build-essential libncurses5-dev sox cmake openjdk-8-jdk
 sudo apt-get install csh doxygen xsltproc graphviz
 
 # Get source (unstable)
-echo "Baixado e compilado: Festival Speech Synthesis, Speech Tools, Festvox, Flite e SPTK"
-git clone https://github.com/festvox/speech_tools
-git clone https://github.com/festvox/festival
-git clone https://github.com/festvox/festvox
-git clone https://github.com/festvox/flite
+#echo "Baixado e compilado: Festival Speech Synthesis, Speech Tools, Festvox, Flite e SPTK"
+#git clone https://github.com/festvox/speech_tools
+#git clone https://github.com/festvox/festival
+#git clone https://github.com/festvox/festvox
+#git clone https://github.com/festvox/flite
 
 wget http://festvox.org/packed/SPTK-3.6.tar.gz
 tar zxvf SPTK-3.6.tar.gz
@@ -60,9 +60,9 @@ cd ..
 #Baixar REAPER
 
 #Fazer download e compilar REAPER
-echo "Fazer download REAPER do repertório Github"
-sleep 2
-git clone https://github.com/google/REAPER.git
+#echo "Fazer download REAPER do repertório Github"
+#sleep 2
+#git clone https://github.com/google/REAPER.git
 
 #Compilar REAPER
 echo "Compilar REAPER"
@@ -83,15 +83,12 @@ echo "SPTKDIR=$SPTKDIR" >> utils.source
 echo "REAPER=`pwd`/REAPER/build/reaper" >> utils.source
 echo "G2P_PB=`pwd`/annotator/fb_nlplib.jar" >> utils.source
 
-# Executar script
-chmod a+x make_tts_utils.sh
-./make_tts_utils.sh
 
 # Clonar binários prontos do G2P e configurar corretamente
-git clone https://github.com/rhasspy/phonetisaurus-pypi/
+#git clone https://github.com/rhasspy/phonetisaurus-pypi/
 mkdir g2p
 
-cp phonetisaurus/bin -r g2p/
-cp phonetisaurus/lib -r g2p/
+cp phonetisaurus-pypi/phonetisaurus/bin -r g2p/
+cp phonetisaurus-pypi/phonetisaurus/lib -r g2p/
 
 

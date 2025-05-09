@@ -1,0 +1,18 @@
+[submodule "g2p/wikipron"]
+	path = g2p/wikipron
+	url = https://github.com/CUNY-CL/wikipron
+[submodule "tools/speech_tools"]
+	path = tools/speech_tools
+	url = https://github.com/festvox/speech_tools
+[submodule "tools/festival"]
+	path = tools/festival
+	url = https://github.com/festvox/festival
+[submodule "tools/festvox"]
+	path = tools/festvox
+	url = https://github.com/festvox/festvox
+[submodule "tools/flite"]
+	path = tools/flite
+	url = https://github.com/festvox/flite
+[submodule "tools/phonetisaurus-pypi"]
+	path = tools/phonetisaurus-pypi
+	url = https://github.com/rhasspy/phonetisaurus-pypi/
