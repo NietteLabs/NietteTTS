@@ -16,3 +16,9 @@
 [submodule "tools/phonetisaurus-pypi"]
 	path = tools/phonetisaurus-pypi
 	url = https://github.com/rhasspy/phonetisaurus-pypi/
+[submodule "tools/REAPER"]
+	path = tools/REAPER
+	url = https://github.com/google/REAPER
+[submodule "tools/mitlm"]
+	path = tools/mitlm
+	url = https://github.com/mitlm/mitlm
