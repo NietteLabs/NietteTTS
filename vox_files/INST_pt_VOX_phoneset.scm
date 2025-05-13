@@ -80,10 +80,10 @@
    (    e   -   +   0   2   1   -   0   p   -   -   -   )
    (    o   -   +   0   2   3   +   0   v   -   -   -   )
    (    u   -   +   0   3   3   +   0   v   -   -   -   )
-   (    ɐ   -   +   0   0   0   0   0   0   -   -   -   ) ;; not found
+   (    ɐ   -   +   0   2   0   0   0   0   -   -   -   ) ;; https://en.wikipedia.org/wiki/Near-open_central_vowel
    (    ɔ   -   +   0   3   3   +   0   v   -   -   -   )
    (    ɛ   -   +   0   3   1   -   0   p   -   -   -   )
-   (    ø   -   +   0   0   0   0   0   0   -   -   -   ) ;; not found
+   (    ø   -   +   0   2   1   +   0   0   -   -   -   ) ;; https://en.wikipedia.org/wiki/Close-mid_front_rounded_vowel
    (    j   -   +   0   0   0   0   0   0   -   -   -   )
    (    w   -   +   0   0   0   0   0   0   -   -   -   )
 
@@ -92,18 +92,19 @@
 ;; i.e., vowels followed by two combining tildes. This is ignored since 
 ;; it's not clear what this means.
 
-   (    ɐ̃   -   +   0   0   0   0   n   0   -   -   -   ) ;; not found
+   (    ɐ̃   -   +   0   1   2   0   n   0   -   -   -   ) ;; https://en.wikipedia.org/wiki/Nasal_vowel
    (    ẽ   -   +   0   2   1   -   n   p   -   -   -   ) 
    (    ĩ   -   +   0   1   1   -   n   p   -   -   -   )
    (    õ   -   +   0   2   3   +   n   v   -   -   -   )
    (    ũ   -   +   0   1   3   +   n   v   -   -   -   )
-   (    ɔ̃   -   +   0   0   0   0   n   0   -   -   -   ) ;; not found
-   (    ɛ̃   -   +   0   0   0   0   n   0   -   -   -   ) ;; not found
-   (    ã   -   +   0   0   0   0   n   0   -   -   -   ) ;; not found
-   (    j̃   -   +   0   0   0   0   n   0   -   -   -   ) ;; not found
-   (    w̃   -   +   0   0   0   0   n   0   -   -   -   ) ;; not found
+   (    ɔ̃   -   +   0   2   3   +   n   0   -   -   -   ) ;; https://en.wikipedia.org/wiki/Open-mid_back_rounded_vowel
+   (    ɛ̃   -   +   0   2   1   -   n   0   -   -   -   ) ;; https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel
+   (    ã   -   +   0   0   2   0   n   0   -   -   -   ) ;; https://en.wikipedia.org/wiki/%C3%83
+   (    j̃   -   +   0   0   0   0   n   p   -   -   -   ) ;; https://en.wikipedia.org/wiki/Nasal_palatal_approximant
+   (    w̃   -   +   0   0   0   0   n   v   -   -   -   ) ;; https://en.wikipedia.org/wiki/Nasal_labial%E2%80%93velar_approximant
 
-;; Consonants
+;; Consonants 
+;; Postalveolar = alveolar
    (    ɾ   +   -   0   0   0   0   l   a   +   -   -   )
    (    s   +   -   0   0   0   0   f   0   -   -   -   )
    (    k   +   -   0   0   0   0   -   v   -   -   -   )
@@ -112,22 +113,22 @@
    (    m   +   -   0   0   0   0   n   0   +   -   -   )
    (    l   +   -   0   0   0   0   l   a   +   -   -   )
    (    n   +   -   0   0   0   0   n   a   +   -   -   )
-   (    ʁ   +   -   0   0   0   0   -   0   0   -   -   ) ;; not found
-   (    t͡ʃ   +   -   0   0   0   0   -   0   -   -   -   ) ;; not found
+   (    ʁ   +   -   0   0   0   0   f   v   +   -   -   ) ;; https://en.wikipedia.org/wiki/Voiced_uvular_fricative
+   (    t͡ʃ   +   -   0   0   0   0   a   a   -   -   -   ) ;; https://en.wikipedia.org/wiki/Voiceless_postalveolar_affricate
    (    p   +   -   0   0   0   0   -   0   -   -   -   )
    (    z   +   -   0   0   0   0   f   0   +   -   -   )
    (    ʃ   +   -   0   0   0   0   f   p   -   -   -   )
    (    b   +   -   0   0   0   0   -   0   +   -   -   )
    (    f   +   -   0   0   0   0   f   b   -   -   -   )
-   (    ɡ   +   -   0   0   0   0   -   v   +   -   -   )
-   (    kʷ   +   -   0   0   0   0   -   0  -   -   -   ) ;; not found
-   (    ɡʷ   +   -   0   0   0   0   -   0   -   -   -   ) ;; # This gu in European, apparently. ;; not found
-   (    d͡ʒ   +   -   0   0   0   0   -   0   -   -   -   ) ;; not found
+   (    ɡ   +   -   0   0   0   0   -   v   +   -   -   ) 
+   (    kʷ   +   -   0   0   0   0   s   v  -   -   -   ) ;; https://en.wikipedia.org/wiki/Labialization
+   (    ɡʷ   +   -   0   0   0   0   s   v   +   -   -   ) ;; # This gu in European, apparently. ;; https://en.wikipedia.org/wiki/Labialization
+   (    d͡ʒ   +   -   0   0   0   0   a   a   +   -   -   ) ;; https://en.wikipedia.org/wiki/Voiced_postalveolar_affricate
    (    v   +   -   0   0   0   0   f    b  +   -   -   )
-   (    ɻ   +   -   0   0   0   0   -   0   -   -   -   ) ;; not found
+   (    ɻ   +   -   0   0   0   0   r   a   -   -   -   ) ;; https://en.wikipedia.org/wiki/Voiced_retroflex_approximant
    (    ʒ   +   -   0   0   0   0   f   p   +   -   -   )
    (    ɲ   +   -   0   0   0   0   n   p   +   -   -   )
-   (    ʎ   +   -   0   0   0   0   -   p   +   -   -   )
+   (    ʎ   +   -   0   0   0   0   l   p   +   -   -   )
    ;; insert the phones here, see exmples in 
    ;; festival/lib/*_phones.scm
 
