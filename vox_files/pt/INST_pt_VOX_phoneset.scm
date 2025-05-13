@@ -67,8 +67,9 @@
    (nuk + - 0)
    )
   (
-;; Silence phoneme
-   (    pau   -   -   0   0   0   0   0   0   -   -   -   ) 
+;; Silence phonemes
+   (    pau   -   -   0   0   0   0   0   0   -   -   -   ) ;; long silence
+   (    sp   -   -   0   0   0   0   0   0   -   -   -   ) ;; short silence
 
 ;; Based on:
 ;; https://en.wikipedia.org/wiki/Portuguese_phonology
