@@ -136,7 +136,7 @@
   )
 )
 
-(PhoneSet.silences '(pau))
+(PhoneSet.silences '(pau sp))
 
 (define (INST_pt_VOX::select_phoneset)
   "(INST_pt_VOX::select_phoneset)
