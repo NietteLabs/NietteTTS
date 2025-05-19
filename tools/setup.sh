@@ -7,10 +7,10 @@
 # Ubuntu
 echo "Instalando os pacotes necessários para as ferramentas"
 sleep 2
-sudo apt-get install git build-essential libncurses5-dev sox cmake openjdk-8-jdk openjdk-8-jre
+sudo apt-get install git build-essential libncurses5-dev sox cmake 
 sudo apt-get install csh doxygen xsltproc graphviz
 sudo apt-get install git g++ autoconf-archive make libtool
-sudo apt-get install python-setuptools python-dev
+sudo apt-get install python3-setuptools python-dev-is-python3
 sudo apt-get install gfortran
 
 wget http://festvox.org/packed/SPTK-3.6.tar.gz
