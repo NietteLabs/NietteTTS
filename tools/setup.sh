@@ -66,8 +66,7 @@ cd mitlm
 ./autogen.sh
 make
 sudo make install
-sudo 
-ldconfig 
+sudo ldconfig
 cd ..
 
 ## Salva as variáveis das ferramentas em um arquivo
