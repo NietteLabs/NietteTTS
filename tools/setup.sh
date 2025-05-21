@@ -10,8 +10,15 @@ sleep 2
 sudo apt-get install git build-essential libncurses5-dev sox cmake 
 sudo apt-get install csh doxygen xsltproc graphviz
 sudo apt-get install git g++ autoconf-archive make libtool
-sudo apt-get install python3-setuptools python-dev-is-python3
+sudo apt-get install python3-setuptools python-dev-is-python3 python3-pip
 sudo apt-get install gfortran
+sudo apt-get install jq
+
+# Pacotes python
+pip install sacrebleu jiwer --break-system-packages
+
+# Export PATH
+export PATH=$PATH:/home/$USER/.local/bin
 
 wget http://festvox.org/packed/SPTK-3.6.tar.gz
 tar zxvf SPTK-3.6.tar.gz
