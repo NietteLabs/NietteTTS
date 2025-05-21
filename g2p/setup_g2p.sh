@@ -3,7 +3,7 @@
 
 # Criar arquivo de treinamento
 mkdir models/
-cat wikipron/data/scrape/tsv/por_latn_bz_broad_filtered.tsv > models/train.dic
+bash split.sh wikipron/data/scrape/tsv/por_latn_bz_broad_filtered.tsv models/train.dic models/test.dic
 echo -e ".\tpau" >> models/train.dic
 echo -e ",\tsp" >> models/train.dic
 echo -e ";\tsp" >> models/train.dic
