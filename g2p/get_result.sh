@@ -10,7 +10,7 @@ TEST_INPUT=$2
 ARCH=$(uname -m)
 #LD_LIBRARY_PATH=../tools/g2p/lib/$ARCH/
 BIN_PATH=../tools/g2p/bin/$ARCH/
-PATH=$PATH:$BIN_PATH
+export PATH=$PATH:$BIN_PATH
 
 # words_test_org.txt = palavras do test.dic
 # phoneme_test_out.txt = transcrições das palavras do test.dic
