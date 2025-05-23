@@ -40,7 +40,7 @@
 ;; This is where it'll fall over if you haven't defined a 
 ;; a phoneset yet, if you have, delete this, if you haven't
 ;; define one then delete this error message
-(error "You have not yet defined a phoneset for pt (and others things ?)\n            Define it in festvox/INST_pt_VOX_phoneset.scm\n")
+;(error "You have not yet defined a phoneset for pt (and others things ?)\n            Define it in festvox/INST_pt_VOX_phoneset.scm\n")
 
 (defPhoneSet
   INST_pt
@@ -108,20 +108,20 @@
 ;; Postalveolar = alveolar
    (    ɾ   +   -   0   0   0   0   l   a   +   -   -   )
    (    s   +   -   0   0   0   0   f   0   -   -   -   )
-   (    k   +   -   0   0   0   0   -   v   -   -   -   )
-   (    t   +   -   0   0   0   0   -   0   -   -   -   )
-   (    d   +   -   0   0   0   0   -   0   +   -   -   )
+   (    k   +   -   0   0   0   0   0   v   -   -   -   )
+   (    t   +   -   0   0   0   0   0   0   -   -   -   )
+   (    d   +   -   0   0   0   0   0   0   +   -   -   )
    (    m   +   -   0   0   0   0   n   0   +   -   -   )
    (    l   +   -   0   0   0   0   l   a   +   -   -   )
    (    n   +   -   0   0   0   0   n   a   +   -   -   )
    (    ʁ   +   -   0   0   0   0   f   v   +   -   -   ) ;; https://en.wikipedia.org/wiki/Voiced_uvular_fricative
    (    t͡ʃ   +   -   0   0   0   0   a   a   -   -   -   ) ;; https://en.wikipedia.org/wiki/Voiceless_postalveolar_affricate
-   (    p   +   -   0   0   0   0   -   0   -   -   -   )
+   (    p   +   -   0   0   0   0   0   0   -   -   -   )
    (    z   +   -   0   0   0   0   f   0   +   -   -   )
    (    ʃ   +   -   0   0   0   0   f   p   -   -   -   )
-   (    b   +   -   0   0   0   0   -   0   +   -   -   )
+   (    b   +   -   0   0   0   0   0   0   +   -   -   )
    (    f   +   -   0   0   0   0   f   b   -   -   -   )
-   (    ɡ   +   -   0   0   0   0   -   v   +   -   -   ) 
+   (    ɡ   +   -   0   0   0   0   0   v   +   -   -   ) 
    (    kʷ   +   -   0   0   0   0   s   v  -   -   -   ) ;; https://en.wikipedia.org/wiki/Labialization
    (    ɡʷ   +   -   0   0   0   0   s   v   +   -   -   ) ;; # This gu in European, apparently. ;; https://en.wikipedia.org/wiki/Labialization
    (    d͡ʒ   +   -   0   0   0   0   a   a   +   -   -   ) ;; https://en.wikipedia.org/wiki/Voiced_postalveolar_affricate
