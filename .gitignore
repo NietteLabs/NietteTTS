@@ -12,3 +12,5 @@ tools/utils.source
 tools/g2p
 corpus/TTS-Portuguese-Corpus
 corpus/Edresson/wav/
+corpus/1000-sentences-thls-dataset/
+corpus/Pieroni/wav
