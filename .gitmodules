@@ -19,6 +19,6 @@
 [submodule "tools/REAPER"]
 	path = tools/REAPER
 	url = https://github.com/google/REAPER
-[submodule "tools/mitlm"]
-	path = tools/mitlm
-	url = https://github.com/mitlm/mitlm
+[submodule "tools/kenlm"]
+	path = tools/kenlm
+	url = https://github.com/kpu/kenlm
