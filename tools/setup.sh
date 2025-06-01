@@ -69,12 +69,20 @@ make
 cd ../../
 echo "REAPER baixado e compilador com sucesso"
 
-cd mitlm
-./autogen.sh
-make
+#cd mitlm
+#./autogen.sh
+#make
+#sudo make install
+#sudo ldconfig
+#cd ..
+
+cd kenlm/
+mkdir build
+cd build
+cmake ../
+make 
 sudo make install
-sudo ldconfig
-cd ..
+cd ../../
 
 ## Salva as variáveis das ferramentas em um arquivo
 echo "ESTDIR=$ESTDIR" >> utils.source
