@@ -1,5 +1,5 @@
 # NietteTTS
-MotorTTS para Android baseado em Flite com suporte ao Português Brasileiro com vozes de alta qualidade usando corpus usados em síntese de fala como TTS-Portuguese-Corpus e CML-TTS
+MotorTTS para Android baseado em Flite com suporte ao Português Brasileiro com vozes de alta qualidade.
 
 # Funções/Qualidades 
 
@@ -25,9 +25,14 @@ Com o estágio de tentagem da voz de demostração, serão feitos testes de aval
 
 O protótipo da aplicação do NietteTTS, será feito e liberado após a construção do suporte de idioma "Português Brasileiro" e ao desenvolvimento completo da voz de demostração.
 
-A voz de demostração será feita usando o corpus TTS-Portuguese-Corpus e será chamada de Edderson.
+Teram duas vozes de demostração para o NietteTTS:
 
-Identificação de idioma Português Brasileiro é PT presente em vox_files/pt. 
+Niette: Voz Feminina treinada usando o corpos CETUC.
+Pieroni: Voz Masculina treinada usando o corpos THLS.
+
+Arquivos de suporte de idiomas para Festival includo léxico estão em vox_files:
+
+voz_files/pt - (Português Brasileiro)
 
 
 
