@@ -19,10 +19,11 @@ PATH=$PATH:$BIN_PATH
 # Fonte Original: https://github.com/AdolfVonKleist/Phonetisaurus
 
 echo "Alinhamento de Diciónario (5min-10min):"
-LD_LIBRARY_PATH=../tools/g2p/lib/$ARCH/ phonetisaurus-align --input=models/train.dic --ofile=models/train_full.corpus --seq1_del=false --seq2_del=false --iter=30 --nbest=4 --penalize_em=true
+LD_LIBRARY_PATH=../tools/g2p/lib/$ARCH/ phonetisaurus-align --input=models/train.dic --ofile=models/train_full.corpus --seq1_del=false --seq2_del=false --nbest=4
 echo "Treinando modelo n-gram (5s-10s):" 
-#estimate-ngram -o 8 -t models/train.corpus -wl models/train.o8.arpa
-lmplz -o 8 < models/train_full.corpus > models/train_full.o8.arpa
-echo "Convertendo para formato OpenFst (10s-20s)":
+estimate-ngram -wv vocab -o 8 -t models/train_full.corpus -wl /tmp/ngram.tmp
+rm /tmp/ngram.tmp
+lmplz --collapse_values -o 8 --interpolate_unigrams 0 --limit_vocab_file vocab --discount_fallback < models/train_full.corpus > models/train_full.o8.arpa
+echo "Convertendo para formato OpenFst (10s-20s)"
 LD_LIBRARY_PATH=../tools/g2p/lib/$ARCH/ phonetisaurus-arpa2wfst --lm=models/train_full.o8.arpa --ofile=models/train_full.o8.fst
 
