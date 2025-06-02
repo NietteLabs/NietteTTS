@@ -13,9 +13,11 @@ cat -n "$DIC_INPUT" | cut -f1 | grep  '.*9$' > lines_test.txt
 #Split linhas que não terminam com 9 $DIC_INPUT para train
 cat -n "$DIC_INPUT" | cut -f1 | grep  '.*[^9]$' > lines_train.txt
 
-cat -n $DIC_INPUT | grep -f lines_train.txt | cut -f2,3 > $TRAIN_OUPUT
+cat -n $DIC_INPUT | grep -f lines_train.txt | cut -f2,3 | gawk '{print tolower($0)}'> $TRAIN_OUPUT
+#cat -n $DIC_INPUT | grep -f lines_train.txt | cut -f2,3 > $TRAIN_OUPUT
 
-cat -n $DIC_INPUT | grep -f lines_test.txt | cut -f2,3 > $TEST_OUTPUT
+cat -n $DIC_INPUT | grep -f lines_test.txt | cut -f2,3  | gawk '{print tolower($0)}' > $TEST_OUTPUT
+#cat -n $DIC_INPUT | grep -f lines_test.txt | cut -f2,3   > $TEST_OUTPUT
 
 rm lines_train.txt
 rm lines_test.txt
