@@ -13,6 +13,7 @@ sudo apt-get install git g++ autoconf-archive make libtool
 sudo apt-get install python3-setuptools python-dev-is-python3 python3-pip
 sudo apt-get install gfortran
 sudo apt-get install jq
+sudo apt-get install gawk
 
 # Pacotes python
 pip install sacrebleu jiwer --break-system-packages
@@ -69,12 +70,12 @@ make
 cd ../../
 echo "REAPER baixado e compilador com sucesso"
 
-#cd mitlm
-#./autogen.sh
-#make
-#sudo make install
-#sudo ldconfig
-#cd ..
+cd mitlm
+./autogen.sh
+make
+sudo make install
+sudo ldconfig
+cd ..
 
 cd kenlm/
 mkdir build
