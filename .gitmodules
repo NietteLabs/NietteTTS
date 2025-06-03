@@ -22,3 +22,6 @@
 [submodule "tools/kenlm"]
 	path = tools/kenlm
 	url = https://github.com/kpu/kenlm
+[submodule "tools/mitlm"]
+	path = tools/mitlm
+	url = https://github.com/mitlm/mitlm/
