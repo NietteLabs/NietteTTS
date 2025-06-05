@@ -332,9 +332,9 @@ A postlexical rule form correcting phenomena over word boundaries."
 (lex.create "INST_pt")
 (lex.set.phoneset "INST_pt")
 (lex.set.lts.method 'INST_pt_lts_function)
-(if (probe_file (path-append INST_pt_VOX::dir "festvox/INST_pt_lex.out"))
+(if (probe_file (path-append INST_pt_VOX::dir "festvox/niettelabs_pt_lex.out"))
     (lex.set.compile.file (path-append INST_pt_VOX::dir 
-                                       "festvox/INST_pt_lex.out")))
+                                       "festvox/niettelabs_pt_lex.out")))
 (INST_pt_addenda)
 (if (probe_file (path-append INST_pt_VOX::dir "festvox/INST_pt_addenda.scm"))
     (load (path-append INST_pt_VOX::dir "festvox/INST_pt_addenda.scm")))
