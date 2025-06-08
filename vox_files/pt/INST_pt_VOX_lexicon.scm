@@ -62,7 +62,6 @@ Basic lexicon should (must ?) have basic letters, symbols and punctuation."
 (lex.add.entry '(";" PUNCT_PONTO_VIRGULA (((pau) 0))))
 
 (lex.add.entry '("'" PUNCT_ASPAS_SIMPLES nil))
-(lex.add.entry '("'" PUNCT_ASPAS_SIMPLES nil))
 (lex.add.entry '("(" PUNCT_PARANTESES_1 nil))
 (lex.add.entry '(")" PUNCT_PARANTESES_2 nil))
 (lex.add.entry '("\"" PUNCT_ASPAS_DUPLAS nil))
