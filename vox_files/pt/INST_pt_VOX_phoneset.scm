@@ -69,7 +69,6 @@
   (
 ;; Silence phonemes
    (    pau   -   -   0   0   0   0   0   0   -   -   -   ) ;; long silence
-   (    sp   -   -   0   0   0   0   0   0   -   -   -   ) ;; short silence
 
 ;; Based on:
 ;; https://en.wikipedia.org/wiki/Portuguese_phonology
@@ -136,7 +135,7 @@
   )
 )
 
-(PhoneSet.silences '(pau sp))
+(PhoneSet.silences '(pau))
 
 (define (INST_pt_VOX::select_phoneset)
   "(INST_pt_VOX::select_phoneset)
