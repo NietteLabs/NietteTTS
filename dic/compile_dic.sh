@@ -14,6 +14,7 @@ for i in "$(cat ../tools/utils.source)"; do
 export $i
 done
 
+export LANG=$LANG
 $ESTDIR/../festival/bin/festival -b '(lex.compile "'$(basename "$DIC_INPUT" .tsv).raw'" "'$(basename "$DIC_INPUT" .tsv).out'")'
 
 echo "Limpar arquivos"
