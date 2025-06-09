@@ -7,14 +7,7 @@
 # Ubuntu
 echo "Instalando os pacotes necessários para as ferramentas"
 sleep 2
-sudo apt-get install git build-essential libncurses5-dev sox cmake 
-sudo apt-get install csh doxygen xsltproc graphviz
-sudo apt-get install git g++ autoconf-archive make libtool
-sudo apt-get install python3-setuptools python-dev-is-python3 python3-pip
-sudo apt-get install gfortran
-sudo apt-get install jq
-sudo apt-get install gawk
-
+sudo apt-get install git build-essential libncurses5-dev sox cmake csh doxygen xsltproc graphviz git g++ autoconf-archive make libtool python3-setuptools python-dev-is-python3 python3-pip gfortran jq gawk libboost-all-dev
 # Pacotes python
 pip install sacrebleu jiwer --break-system-packages
 
