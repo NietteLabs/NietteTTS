@@ -84,7 +84,7 @@ echo "FLITEDIR=$FLITEDIR" >> utils.source
 echo "FESTVOXDIR=$FESTVOXDIR" >> utils.source
 echo "SPTKDIR=$SPTKDIR" >> utils.source
 echo "REAPER=`pwd`/REAPER/build/reaper" >> utils.source
-
+echo "NIETTETTS_DEV=$(cd ../ && pwd)" >> utils.source
 
 # Configurar corretamente o g2p
 mkdir g2p
