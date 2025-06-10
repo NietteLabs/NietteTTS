@@ -23,6 +23,7 @@ O protótipo da aplicação do NietteTTS, será feito e liberado após a constru
 Teram duas vozes de demostração para o NietteTTS:
 
 Niette: Voz Feminina treinada usando o corpos CETUC.
+
 Pieroni: Voz Masculina treinada usando o corpos THLS.
 
 Arquivos de suporte de idiomas para Festival includo léxico estão em vox_files:
