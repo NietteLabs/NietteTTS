@@ -78,8 +78,25 @@ Basic lexicon should (must ?) have basic letters, symbols and punctuation."
 Return pronunciation of word not in lexicon."
 
   ;; If you have nothing ...
-  (format t "Unknown word %s\n" word)
-  (list word features nil)
+;  (format t "Unknown word %s\n" word)
+;  (list word features nil)
+
+  ;; If you have lts rules (trained or otherwise)
+  (if (not boundp 'niettelabs_pt_lts_rules)
+      (require 'niettelabs_pt_lts_rules))
+  (let ((dword (downcase word)) (phones) (syls))
+;    (set! phones (lts_predict dword niettelabs_pt_lts_rules))
+        (set! tmpfile (make_tmp_filename))
+        (format t "%s\n" dword) ;; Debug
+        (set! g2p (format nil "bash festvox/setup.sh %s > %s" dword tmpfile))
+        (system g2p)
+        (let ((fd (fopen tmpfile  "r")))
+              (set! phones (readfp fd))
+              (fclose fd)
+)
+        (set! syls (niettelabs_pt_lex_syllabify_phstress phones))
+        (list word features syls))
+  )
 
   ;; If you have lts rules (trained or otherwise)
 ;  (if (not boundp 'INST_pt_lts_rules)
