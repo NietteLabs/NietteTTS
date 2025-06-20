@@ -103,7 +103,7 @@ do
     echo $fname F0 extraction with REAPER
     TMP=reaperf0_tmp.$$
 
-	    $REAPER -s -i wav/$fname.wav -x $F0MAX -m $F0MIN -u 0.005 -f $TMP.f0 -a
+	    $REAPER -i wav/$fname.wav -u 0.005 -f $TMP.f0 -a
 	    #$HOME/Projetos/NietteTTS/tools/REAPER/build/reaper -i wav/$fname.wav -t -f $TMP.f0 -a
 	    cat $TMP.f0 |  sed '1,7d' | cut -f3 -d" " > $TMP.f0.1
 #	    cat $TMP.f0 |  sed '1,7d' | sed 's/-1.000000/0/g' | cut -f3 -d" " > $TMP.f0.1
