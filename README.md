@@ -1,5 +1,5 @@
 # NietteTTS
-MotorTTS para Android (Apenas Linux no momento) baseado em Flite com suporte ao Português Brasileiro com vozes de alta qualidade.
+MotorTTS para Android (Apenas Linux no momento) usando Festival com suporte ao Português Brasileiro com vozes de alta qualidade.
 
 # Funções/Qualidades 
 
@@ -21,16 +21,14 @@ Com o estágio de tentagem da voz de demostração, serão feitos testes de aval
 O protótipo da aplicação do NietteTTS, será feito e liberado após a construção do suporte de idioma "Português Brasileiro" e ao desenvolvimento completo das vozes de demostração.
 
 Teram duas vozes de demostração para o NietteTTS:
-
 Niette: Voz Feminina treinada usando o corpos CETUC.
-
 Pieroni: Voz Masculina treinada usando o corpos THLS.
 
 Arquivos de suporte de idiomas para Festival includo léxico estão em vox_files:
-
 voz_files/pt - (Português Brasileiro)
 
-
+# Sobre Suporte ao Flite
+Devido alguns problemas referente ao modo de como o Flite funcionar, dificultades para imprementação do novo G2P usando Phonetisaurus e quantização das vozes, o desenvolvimento focará no Festival.
 
 
 
