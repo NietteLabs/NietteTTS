@@ -21,3 +21,4 @@ dic/*.txt
 dic/*.dic
 dic/*.raw
 dic/*.out
+g2p/vocab
