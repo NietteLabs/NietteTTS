@@ -15,3 +15,9 @@ corpus/Edresson/wav/
 corpus/1000-sentences-thls-dataset/
 corpus/Pieroni/wav
 voices/festival
+g2p/models
+g2p/wikipron
+dic/*.txt
+dic/*.dic
+dic/*.raw
+dic/*.out
