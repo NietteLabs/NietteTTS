@@ -57,11 +57,19 @@ of words that expand given token with name."
    (t ;; when no specific rules apply do the general ones
     (list name))))
 
-(define (INST_pt::number token name)
-  "(INST_pt::number token name)
+(define (niettelabs_pt::number token name)
+  "(niettelabs_pt::number token name)
 Return list of words that pronounce this number in pt."
-
-  (error "INST_pt::number to be written\n")
+(set! number (format nil "%s" name))
+(set! tmpfile (make_tmp_filename))
+(set! num2word (format nil "num2words -l pt_BR %s > %s" number tmpfile))
+(system num2word)
+(let ((fd (fopen tmpfile  "r")))
+              (set! n2w (readfp fd))
+              (fclose fd)
+)
+   (list n2w)
+;  (error "niettelabs_pt::number to be written\n")
 
 )
 
