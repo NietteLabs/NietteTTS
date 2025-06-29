@@ -57,7 +57,7 @@ of words that expand given token with name."
    (t ;; when no specific rules apply do the general ones
     (list name))))
 
-(define (niettelabs_pt::number token name)
+(define (INST_pt::number token name)
   "(niettelabs_pt::number token name)
 Return list of words that pronounce this number in pt."
 (set! number (format nil "%s" name))
