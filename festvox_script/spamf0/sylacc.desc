@@ -2,35 +2,17 @@
 ( cbnum vector )
 ( phraseval ignore float )
 ( R:SylStructure.parent.R:Word.p.gpos 
-punc PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO content det in "0" aux cc pps to wp md )
+punc PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO content det in "0" aux cc pps to wp md tag001 tag002 tag003 tag004 tag005 tag006 tag007 tag008 tag009 tag010 tag011 tag012 tag013 tag014 tag015 tag016 tag017 tag018 tag019 tag020 tag021 tag022 tag023 tag024 tag025 tag026 tag027 tag028 tag029 tag030)
 ( R:SylStructure.parent.R:Word.n.gpos 
-punc PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO content det in "0" aux cc pps to wp md )
+punc PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO content det in "0" aux cc pps to wp md tag001 tag002 tag003 tag004 tag005 tag006 tag007 tag008 tag009 tag010 tag011 tag012 tag013 tag014 tag015 tag016 tag017 tag018 tag019 tag020 tag021 tag022 tag023 tag024 tag025 tag026 tag027 tag028 tag029 tag030)
 ( R:SylStructure.parent.gpos 
-punc PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO content det in "0" aux cc pps to wp md )
+punc PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO content det in "0" aux cc pps to wp md tag001 tag002 tag003 tag004 tag005 tag006 tag007 tag008 tag009 tag010 tag011 tag012 tag013 tag014 tag015 tag016 tag017 tag018 tag019 tag020 tag021 tag022 tag023 tag024 tag025 tag026 tag027 tag028 tag029 tag030)
 ( syl_vowel
 PUNCT_DOIS_PONTOS PUNCT_PONTO_FINAL PUNCT_VIRGULA PUNCT_TRAVESSAO PUNCT_PONTO_VIRGULA PUNCT_ASPAS_SIMPLES PUNCT_PARANTESES_1 PUNCT_PARANTESES_2 PUNCT_ASPAS_DUPLAS PUNCT_PONTO_INTERROGACAO PUNCT_PONTO_EXCLAMACAO
-punc "novowel" a
-i
-e
-o
-u
-ɐ
-ɔ
-ɛ
-ø
-j
-w
-ɐ̃
-ẽ
-ĩ
-õ
-ũ
-ɔ̃
-ɛ̃
-ã
-j̃
-w̃
-"0"
+tag001 tag002 tag003 tag004 tag005 tag006 tag007 tag008 tag009 tag010 tag011 tag012 tag013 tag014 tag015
+tag016 tag017 tag018 tag019 tag020 tag021 tag022 tag023 tag024 tag025 tag026 tag027 tag028 tag029 tag030
+punc "novowel" "0"
+a b d d͡ʒ e f i j j̃ k kʷ l m n o p pau s t t͡ʃ u v w w̃ z õ ĩ ũ ɐ ɐ̃ ɔ ɛ ɡ ɲ ɻ ɾ ʁ ʃ ʎ ʒ ẽ
 )
 ( pos_in_word float)
 ( accented  0 1 )
@@ -54,12 +36,22 @@ w̃
 ( ssyl_out float )
 ( asyl_in ignore float )
 ( asyl_out ignore float )
-( lisp_cg_break 0 1 3 4  )
-( n.lisp_cg_break 0 1 3 4  )
-( n.n.lisp_cg_break 0 1 3 4  )
-( p.p.lisp_cg_break 0 1 3 4 )
-( p.lisp_cg_break 0 1 3 4  )
+( lisp_cg_break 0 1 3 4 float)
+( n.lisp_cg_break 0 1 3 4 float )
+( n.n.lisp_cg_break 0 1 3 4 float)
+( p.p.lisp_cg_break 0 1 3 4 float)
+( p.lisp_cg_break 0 1 3 4 float)
 ( sub_phrases float )
+( word_numsyls float )
+( pos_in_syl 0 1 2 3 4 5 6 7 8)
+( syl_codasize float  )
+( syl_onsetsize float )
+;;
+( pp.syl_break float )
+( p.syl_break float )
+( syl_break float )
+( n.syl_break float )
+( nn.syl_break float)
 )
 ;( lisp_cg_phrase_dur_ratio float)
 ;( lisp_cg_break 0 1 3 4  )

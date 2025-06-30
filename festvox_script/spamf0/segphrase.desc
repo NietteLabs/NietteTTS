@@ -1,7 +1,7 @@
 (
 ( f0val float )
 ( R:SylStructure.parent.parent.gpos 
-content det in "0" aux cc pps to wp md )
+content det in "0" aux cc pps to wp md tag001 tag002 tag003 tag004 tag005 tag006 tag007 tag008 tag009 tag010 tag011 tag012 tag013 tag014 tag015 tag016 tag017 tag018 tag019 tag020 tag021 tag022 tag023 tag024 tag025 tag026 tag027 tag028 tag029 tag030)
 ( R:SylStructure.parent.parent.R:Phrase.parent.lisp_cg_find_phrase_number float )
 ( R:SylStructure.parent.parent.R:Word.pos_in_phrase float)
 ( R:SylStructure.parent.lisp_cg_syl_ratio float)
@@ -17,6 +17,7 @@ content det in "0" aux cc pps to wp md )
 ( R:SylStructure.parent.R:Syllable.n.n.lisp_cg_break 0 1 3 4  )
 ( R:SylStructure.parent.R:Syllable.p.p.lisp_cg_break 0 1 3 4 )
 ( R:SylStructure.parent.R:Syllable.p.lisp_cg_break 0 1 3 4  )
+;;
 )
 ;( lisp_cg_phrase_dur_ratio float)
 ;( lisp_cg_break 0 1 3 4  )
