@@ -95,7 +95,7 @@ Return pronunciation of word not in lexicon."
               (fclose fd)
 )
         (set! syls (niettelabs_pt_lex_syllabify_phstress phones))
-        (list word features syls))
+        (list word features syls)
   )
 
   ;; If you have lts rules (trained or otherwise)
