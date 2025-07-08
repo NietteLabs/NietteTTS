@@ -18,10 +18,12 @@ O NietteTTS está sendo desenvolvindo apenas por uma pessoa (Pallas13) sendo ess
 
 # Vozes do NietteTTS
 
-| Nome  | Idioma | Descrição |
-| ------------- | ------------- | ------------- |
-| Niette   | Português Brasileiro (pt) | Voz Feminina treinada usando o corpos CETUC |
-| Pieroni  | Português Brasileiro (pt) | Voz Masculina treinada usando o corpos THLS  |
+| Nome  | Idioma | Descrição | MCD | Recursos Extras | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Niette   | Português Brasileiro (pt) | Voz Feminina treinada usando o corpos CETUC | Completo: 4.05 - Trainamento/Teste(90/10): 4.615773 | Modelos SpamF0 e Phrasig |
+| Pieroni  | Português Brasileiro (pt) | Voz Masculina treinada usando o corpos THLS | Completo: 4.19 - Trainamento/Teste(90/10): 4.615773 | Modelo SpamF0 e Phrasig |
+
+MCD: Mais menor esse número, melhor.
 
 # Arquivos de Idioma:
 
@@ -31,6 +33,5 @@ O NietteTTS está sendo desenvolvindo apenas por uma pessoa (Pallas13) sendo ess
 
 # Sobre Suporte ao Flite
 Devido alguns problemas referente ao modo de como o Flite funcionar, dificultades para imprementação do novo G2P usando Phonetisaurus e quantização das vozes, o desenvolvimento focará no Festival.
-
 
 
