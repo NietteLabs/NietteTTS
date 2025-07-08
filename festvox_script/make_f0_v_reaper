@@ -100,8 +100,8 @@ while read i
 do
     fname=$i
 
-    echo $fname F0 extraction with REAPER
-    TMP=reaperf0_tmp.$$
+        echo $fname F0 extraction with REAPER
+        TMP=reaperf0_tmp.$$
 
 	    $REAPER -i wav/$fname.wav -u 0.005 -f $TMP.f0 -a
 	    #$HOME/Projetos/NietteTTS/tools/REAPER/build/reaper -i wav/$fname.wav -t -f $TMP.f0 -a
@@ -119,7 +119,7 @@ do
         mv $fname.f0 f0/$fname.f0
 	    $ESTDIR/bin/ch_track f0/$fname.f0 | awk '{print $2}' > v/$fname.v
 
-	rm -rf $TMP.*
+        rm -rf $TMP.*
 done
 
 

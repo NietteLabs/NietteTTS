@@ -10,9 +10,6 @@
 [submodule "tools/festvox"]
 	path = tools/festvox
 	url = https://github.com/festvox/festvox
-[submodule "tools/flite"]
-	path = tools/flite
-	url = https://github.com/festvox/flite
 [submodule "tools/phonetisaurus-pypi"]
 	path = tools/phonetisaurus-pypi
 	url = https://github.com/rhasspy/phonetisaurus-pypi/
