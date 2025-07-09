@@ -102,9 +102,9 @@
 	"new_phr_break_params
         Parameters for New phrase break statistical model.")
   
-  (set! phr_break_params new_phr_break_params)
-  (set! scfg_grammar (load (format nil "syntax/grammar.%s.%s.out" cg:phrasyn_grammar_ntcount cg:phrasyn_mode) t))
-  (set! phrase_cart_tree (load (format nil "syntax/break_prediction.%s.%s.tree" cg:phrasyn_grammar_ntcount cg:phrasyn_mode) t))
+	(set! phr_break_params new_phr_break_params)
+	(set! scfg_grammar (load (path-append INST_pt_VOX::dir (format nil "syntax/grammar.%s.%s.out" cg:phrasyn_grammar_ntcount cg:phrasyn_mode)) t))
+	(set! phrase_cart_tree (load (path-append INST_pt_VOX::dir (format nil "syntax/break_prediction.%s.%s.tree" cg:phrasyn_grammar_ntcount cg:phrasyn_mode)) t))
   )  
 
 (if (probe_file (path-append INST_pt_VOX::dir "festvox/INST_pt_VOX_phrasetree.scm"))
