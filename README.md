@@ -22,7 +22,7 @@ As vozes do NietteTTS não são compartivel com speech-dispatcher, devido a prob
 | Nome  | Idioma | Descrição | MCD | Recursos Extras | 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Niette   | Português Brasileiro (pt) | Voz Feminina treinada usando o corpos CETUC | Completo: 4.05 - Trainamento/Teste(90/10): 4.615773 | Modelos SpamF0 e Phrasig |
-| Pieroni  | Português Brasileiro (pt) | Voz Masculina treinada usando o corpos THLS | Completo: 4.19 - Trainamento/Teste(90/10): 4.615773 | Modelo SpamF0 e Phrasig |
+| Pieroni  | Português Brasileiro (pt) | Voz Masculina treinada usando o corpos THLS | Completo: 4.19 - Trainamento/Teste(90/10): 4.561331 | Modelo SpamF0 e Phrasig |
 
 MCD: Mais menor esse número, melhor.
 
