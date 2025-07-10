@@ -15,6 +15,7 @@ Scripts para instalação de ferramentas, treinamento de modelo g2p e vocal.
 # Observações 
 O NietteTTS está sendo desenvolvindo apenas por uma pessoa (Pallas13) sendo esse projeto para Trabalho de Conclusão de Curso (TCC) do Curso Técnico em Desenvolvimento de Sistemas devido ao tempo, falta de recursos compurtacionais.
 
+As vozes do NietteTTS não são compartivel com speech-dispatcher, devido a problemas com API do speech-dispatcher para Festival.
 
 # Vozes do NietteTTS
 
@@ -33,5 +34,3 @@ MCD: Mais menor esse número, melhor.
 
 # Sobre Suporte ao Flite
 Devido alguns problemas referente ao modo de como o Flite funcionar, dificultades para imprementação do novo G2P usando Phonetisaurus e quantização das vozes, o desenvolvimento focará no Festival.
-
-
