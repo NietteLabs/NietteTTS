@@ -35,7 +35,8 @@
 ;;;
 
 ;;; Load any necessary files here
-
+;; Para funcionar com speech-dispatcher
+(set! ignore-recode:mode t)
 
 
 (define (INST_pt_VOX::select_other)
