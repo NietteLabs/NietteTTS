@@ -1,0 +1,13 @@
+Isto é uma frase de exemplo para avaliação da síntese de fala, para comparação de diversos modelos TTS ou T T S.
+Avaliando diversos aspectos como entendimento do texto, prosódia, qualidade sonora e e t c.
+Avaliando como o modelo tts lidar com pontuações como: 
+1. Oi, tudo bem?
+2. Niette comemorou o aniversário de Pallas em 13 de março de 2025.
+3. Pallas disse á Niette que a amar.
+E avaliando como o modelo lidar com sentenças longas de texto como:
+1. TigerOS
+Seguro, rápido e estável
+Seja para o uso pessoal ou para empresas nós temos solução para quem deseja eliminar o problema da pirataria além de evitar invasões, espionagem e trocar os computadores sem real necessidade.
+2. Morgana disse a Pallas;
+- Eu nunca irei deixar-la haja sol ou chuva; Dizendo isso calmante a Pallas.
+- Obrigada; Disse Pallas em resposta.
