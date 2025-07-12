@@ -34,3 +34,73 @@ MCD: Mais menor esse número, melhor.
 
 # Sobre Suporte ao Flite
 Devido alguns problemas referente ao modo de como o Flite funcionar, dificultades para imprementação do novo G2P usando Phonetisaurus e quantização das vozes, o desenvolvimento focará no Festival.
+
+# Usar vozes do NietteTTS com Speech Dispatcher
+
+## Instalar as vozes no seu sistema (Baseado em Debian/Ubuntu)
+
+```bash
+sudo apt-get install ./niette.deb
+```
+
+## Instalar versão modificado do festival-freebsoft-utils
+
+```bash
+git clone https://github.com/NietteLabs/festival-freebsoft-utils
+cd festival-freebsoft-utils
+sudo cp *.scm /usr/share/festival 
+```
+
+### Para usar Festival com PulseAudio/Alsa
+Edite o arquvivo ```~/.festivalrc```
+
+**PulseAudio:**
+```scheme
+(Parameter.set 'Audio_Required_Format 'aiff)
+(Parameter.set 'Audio_Method 'Audio_Command)
+(Parameter.set 'Audio_Command "paplay $FILE --client-name=Festival --stream-name=Speech")
+```
+
+**Alsa:**
+```scheme
+(Parameter.set 'Audio_Method 'Audio_Command)
+(Parameter.set 'Audio_Command "aplay -q -c 1 -t raw -f s16 -r $SR $FILE")
+```
+
+## Adicionar suporte ao Festival ao Speech Dispatcher
+
+### Abrar o seguinte arquivo de configuração:
+
+```bash
+nano ~/.config/speech-dispatcher/speechd.conf
+```
+
+Procure pela linha:
+
+```
+#AddModule "festival"
+```
+
+para:
+
+```
+AddModule "festival"
+```
+
+## Listar vozes instaladas
+
+```bash
+spd-say -L
+```
+
+Caso houver algum erro ao executar é necessario iniciar o Festival em modo servidor:
+
+```bash
+festival --server
+```
+
+Coloque esse comando acima para inicar automaticamente em seu sistema.
+
+
+
+
