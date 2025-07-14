@@ -13,9 +13,9 @@ Extração de F0 usando REAPER, sendo melhor que o SPTK-3.6 usado por padrão pe
 Scripts para instalação de ferramentas, treinamento de modelo g2p e vocal.
 
 # Observações 
-O NietteTTS está sendo desenvolvindo apenas por uma pessoa (Pallas13) sendo esse projeto para Trabalho de Conclusão de Curso (TCC) do Curso Técnico em Desenvolvimento de Sistemas devido ao tempo, falta de recursos compurtacionais.
+- O NietteTTS está sendo desenvolvindo apenas por uma pessoa (Pallas13) sendo esse projeto para Trabalho de Conclusão de Curso (TCC) do Curso Técnico em Desenvolvimento de Sistemas devido ao tempo, falta de recursos compurtacionais.
+- Para as vozes serem usadas no Speech Dispatcher é necessario seguir passo a passo de instalação. O funcionamento é instavél.
 
-As vozes do NietteTTS não são compartivel com speech-dispatcher, devido a problemas com API do speech-dispatcher para Festival.
 
 # Vozes do NietteTTS
 
@@ -37,10 +37,16 @@ Devido alguns problemas referente ao modo de como o Flite funcionar, dificultade
 
 # Usar vozes do NietteTTS com Speech Dispatcher
 
+**Fonte:** 
+https://wiki.archlinux.org/title/Festival_(Portugu%C3%AAs)
+https://wiki.archlinux.org/title/Speech_dispatcher
+
 ## Instalar as vozes no seu sistema (Baseado em Debian/Ubuntu)
 
+### Exemplo para usar voz Niette.
+
 ```bash
-sudo apt-get install ./niette.deb
+sudo apt-get install ./niette.deb speech-dispatcher-festival
 ```
 
 ## Instalar versão modificado do festival-freebsoft-utils
@@ -98,9 +104,6 @@ Caso houver algum erro ao executar é necessario iniciar o Festival em modo serv
 ```bash
 festival --server
 ```
-
-Coloque esse comando acima para inicar automaticamente em seu sistema.
-
 
 
 
