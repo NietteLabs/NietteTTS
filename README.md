@@ -39,6 +39,7 @@ Devido alguns problemas referente ao modo de como o Flite funcionar, dificultade
 
 **Fonte:** 
 https://wiki.archlinux.org/title/Festival_(Portugu%C3%AAs)
+
 https://wiki.archlinux.org/title/Speech_dispatcher
 
 ## Instalar as vozes no seu sistema (Baseado em Debian/Ubuntu)
