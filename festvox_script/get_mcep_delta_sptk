@@ -1,0 +1,135 @@
+#!/bin/bash
+
+LANG=C; export LANG
+
+if [ ! "$ESTDIR" ]
+then
+   echo "environment variable ESTDIR is unset"
+   echo "set it to your local speech tools directory e.g."
+   echo '   bash$ export ESTDIR=/home/awb/projects/speech_tools/'
+   echo or
+   echo '   csh% setenv ESTDIR /home/awb/projects/speech_tools/'
+   exit 1
+fi
+
+if [ ! "$FESTVOXDIR" ]
+then
+   echo "environment variable FESTVOXDIR is unset"
+   echo "set it to your local festvox directory e.g."
+   echo '   bash$ export FESTVOXDIR=/home/awb/projects/festvox/'
+   echo or
+   echo '   csh% setenv FESTVOXDIR /home/awb/projects/festvox/'
+   exit 1
+fi
+
+if [ ! "$SPTKDIR" ]
+then
+    echo "environment variable SPTKDIR is unset"
+    echo "set it to your local festvox directory e.g."
+    echo '   bash$ export SPTKDIR=/usr/local/SPTK/'
+    echo or
+    echo '   csh% setenv SPTKDIR /usr/local/SPTK/'
+    exit 1
+fi
+
+VERSION=$($SPTKDIR/mgcep -h | grep version)
+
+if [ ! "$VERSION" = ' SPTK: version 4.3' ]
+                then
+                        echo "Your SPTK verion is $VERSION, is need SPTK-4.3"
+			echo "git clone https://github.com/sp-nitech/SPTK"
+			echo "cd SPTK"
+			echo "mkdir build"
+			echo "cmake ../"
+			echo "make -j$(nproc)"
+			echo "export SPTK=$(PWD)"
+	                exit 1
+fi
+
+
+PROMPTFILE=etc/txt.done.data
+if [ $# = 1 ]
+then
+   PROMPTFILE=$1
+fi
+
+    # Extract MCEP using SPTK, but save them into mcep_deltas directory
+    # so other parts of this script continue to work
+    MCEPORDER=24
+    WINDOWTYPE=1
+    NORMALIZE=1
+    FFTLEN=2048
+    LNGAIN=1
+
+    X2X=$SPTKDIR/x2x
+    MCEP=$SPTKDIR/mgcep
+    LPC2LSP=$SPTKDIR/lpc2lsp
+    MERGE=$SPTKDIR/merge
+    SOPR=$SPTKDIR/sopr
+    NAN=$SPTKDIR/nan
+    MINMAX=$SPTKDIR/minmax
+    PITCH=$SPTKDIR/pitch
+    FRAME=$SPTKDIR/frame
+    WINDOW=$SPTKDIR/window
+    DELTA=$SPTKDIR/delta
+
+    if [ ! -d mcep_sptk ]
+    then
+	mkdir mcep_sptk
+    fi
+
+    if [ ! -d mcep_deltas ]
+    then
+	mkdir mcep_deltas
+    fi
+
+    cat $PROMPTFILE |
+    awk '{print $2}' |
+    while read i
+    do
+	fname=$i
+
+	if [ "$SAMPFREQ" = "" ]
+	then
+	    # Use the first wav file to determine sampling frequency
+	    SAMPFREQ=$($ESTDIR/bin/ch_wave -info wav/$fname.wav  | grep 'Sample rate' | cut -d ' ' -f 3)
+
+		FRAMELEN=$(echo | awk "{print int(0.025*$SAMPFREQ)}")
+		FRAMESHIFT=$(echo | awk "{print int(0.005*$SAMPFREQ)}")
+
+		FWARP[8000]=0.312
+		FWARP[11025]=0.357
+		FWARP[16000]=0.42
+		FWARP[22050]=0.455
+		FWARP[32000]=0.504
+		FWARP[44100]=0.544
+		FWARP[48000]=0.554
+
+		FREQWARP=${FWARP[$SAMPFREQ]}
+		
+		if [ "$FREQWARP" = "" ]
+		then
+			echo "mcep_sptk_deltas: Cannot handle sampling frequency $SAMPFREQ"
+			exit 1
+	    fi
+	fi
+
+	echo "$fname MCEP with deltas (SPTK) $SAMPFREQ"
+	TMP=mcep_sptk_tmp.$$
+	
+	# SPTK-4.3 output is double.
+	# Save raw wave out
+	$ESTDIR/bin/ch_wave -otype raw < wav/$fname.wav > $TMP.raw
+	$X2X +sd $TMP.raw > $TMP.sf
+#	cat $TMP.sf | $MINMAX | $X2X +fa > $TMP.minmax
+#	min=$(head -n 1 $TMP.minmax)
+#	max=$(tail -n 1 $TMP.minmax)
+	$FRAME -l $FRAMELEN -p $FRAMESHIFT $TMP.sf | \
+	$WINDOW -l $FRAMELEN -L $FFTLEN -w $WINDOWTYPE -n $NORMALIZE | \
+	$MCEP -a $FREQWARP -m $MCEPORDER -l $FFTLEN -e 1.0E-08 > mcep_sptk/$fname.mcep
+	$DELTA -m $MCEPORDER -d -0.5 0.0 0.5 < mcep_sptk/$fname.mcep |  $X2X +df | \
+	$X2X +fa -c $(expr 2 \* \( $MCEPORDER + 1 \))  | \
+	$ESTDIR/bin/ch_track -itype ascii -otype est_binary -s 0.005 -o mcep_deltas/$fname.mcep
+	rm -rf $TMP.*
+    done
+    exit 0
