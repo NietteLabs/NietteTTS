@@ -1,5 +1,7 @@
 #!/bin/bash
+# Obter MCEP (MGC) com delta usando SPTK-4.3
 
+#Versão modificada do "bin/do_clustergen mcep_sptk", para isolamento e uso com SPTK-4.3
 LANG=C; export LANG
 
 if [ ! "$ESTDIR" ]
@@ -121,9 +123,6 @@ fi
 	# Save raw wave out
 	$ESTDIR/bin/ch_wave -otype raw < wav/$fname.wav > $TMP.raw
 	$X2X +sd $TMP.raw > $TMP.sf
-#	cat $TMP.sf | $MINMAX | $X2X +fa > $TMP.minmax
-#	min=$(head -n 1 $TMP.minmax)
-#	max=$(tail -n 1 $TMP.minmax)
 	$FRAME -l $FRAMELEN -p $FRAMESHIFT $TMP.sf | \
 	$WINDOW -l $FRAMELEN -L $FFTLEN -w $WINDOWTYPE -n $NORMALIZE | \
 	$MCEP -a $FREQWARP -m $MCEPORDER -l $FFTLEN -e 1.0E-08 > mcep_sptk/$fname.mcep
