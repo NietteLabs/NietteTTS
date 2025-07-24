@@ -21,10 +21,14 @@ Scripts para instalação de ferramentas, treinamento de modelo g2p e vocal.
 
 | Nome  | Idioma | Descrição | MCD | Recursos Extras | 
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Niette   | Português Brasileiro (pt) | Voz Feminina treinada usando o corpos CETUC | Completo: 4.05 - Trainamento/Teste(90/10): 4.615773 | Modelos SpamF0 e Phrasig |
-| Pieroni  | Português Brasileiro (pt) | Voz Masculina treinada usando o corpos THLS | Completo: 4.19 - Trainamento/Teste(90/10): 4.561331 | Modelo SpamF0 e Phrasig |
+| Niette   | Português Brasileiro (pt) | Voz Feminina treinada usando o corpos CETUC | Completo: 2.26 (16hz-SPTK-4.3) - Trainamento/Teste(90/10): 4.615773 | Modelos SpamF0 e Phrasig |
+| Pieroni  | Português Brasileiro (pt) | Voz Masculina treinada usando o corpos THLS | Completo: 3.90 (48hz-SPTK-4.3) - Trainamento/Teste(90/10): 4.561331 | Modelo SpamF0 e Phrasig |
 
-MCD: Mais menor esse número, melhor.
+MCD: Menor MCD, melhores resultados.
+
+## Observações sobre as vozes
+
+Para construção das vozes apenas foi feito usando todo o corpus, o MCD para treinamento e teste não foi obtindo devido a isso. Sendo MCD da versão antiga.
 
 # Arquivos de Idioma:
 
