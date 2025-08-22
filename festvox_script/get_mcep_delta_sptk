@@ -44,7 +44,7 @@ if [ ! "$VERSION" = ' SPTK: version 4.3' ]
 			echo "mkdir build"
 			echo "cmake ../"
 			echo "make -j$(nproc)"
-			echo "export SPTK=$(PWD)"
+			echo "export SPTKDIR=$(PWD)"
 	                exit 1
 fi
 
