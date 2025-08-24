@@ -347,7 +347,14 @@ A postlexical rule form correcting phenomena over word boundaries."
 ;;; Lexicon definition
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+(set! tmpfile (make_tmp_filename))
+(set! user_command (format nil "echo $USER > %s" tmpfile))
+(system user_command)
+(let ((fd (fopen tmpfile  "r")))
+              (set! user (readfp fd))
+              (fclose fd)
+)
+(set! local_dic (format nil "/home/%s/.local/share/niettetts/dics/INST_pt_addenda.scm" user))
 (lex.create "INST_pt")
 (lex.set.phoneset "INST_pt")
 (lex.set.lts.method 'INST_pt_lts_function)
@@ -355,9 +362,8 @@ A postlexical rule form correcting phenomena over word boundaries."
     (lex.set.compile.file (path-append INST_pt_VOX::dir 
                                        "festvox/niettelabs_pt_lex.out")))
 (INST_pt_addenda)
-(if (probe_file (path-append INST_pt_VOX::dir "festvox/INST_pt_addenda.scm"))
-    (load (path-append INST_pt_VOX::dir "festvox/INST_pt_addenda.scm")))
-
+(if (probe_file local_dic)
+    (load local_dic))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; Lexicon setup
