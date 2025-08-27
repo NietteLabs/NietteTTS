@@ -87,15 +87,17 @@ Return pronunciation of word not in lexicon."
   (let ((dword (downcase word)) (phones) (syls))
 ;    (set! phones (lts_predict dword niettelabs_pt_lts_rules))
 	(set! tmpfile (make_tmp_filename))
-        (format t "%s\n" dword) ;; Debug
-        (set! voice_path (path-append INST_pt_VOX::dir))
-        (set! script_path (path-append INST_pt_VOX::dir "festvox/setup.sh"))
-        (set! g2p (format nil "bash %s %s %s > %s" script_path dword voice_path tmpfile))
-        (system g2p)
+        (set! tmpfile1 (make_tmp_filename))
+        (set! g2p_model (path-append INST_pt_VOX::dir "festvox/g2p/model_g2p.fst"))
+        (set! g2p_header (format nil "/usr/bin/echo -e 'WORD=%s\nMODEL_G2P=%s\nPHONE_FILE=%s' > %s" dword g2p_model tmpfile tmpfile1))
+        (system g2p_header)
+        (system (format nil "%s %s" (path-append INST_pt_VOX::dir "festvox/g2p.sh") tmpfile1))
+
         (let ((fd (fopen tmpfile  "r")))
               (set! phones (readfp fd))
               (fclose fd)
-)
+        )
+
         (set! syls (INST_pt_lex_syllabify_phstress phones))
         (list word features syls)
   )
