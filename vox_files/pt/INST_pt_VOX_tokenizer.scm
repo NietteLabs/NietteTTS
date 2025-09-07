@@ -68,6 +68,7 @@ Return list of words that pronounce this number in pt."
               (set! n2w (readfp fd))
               (fclose fd)
 )
+(delete-file tmpfile)
    (list n2w)
 ;  (error "niettelabs_pt::number to be written\n")
 

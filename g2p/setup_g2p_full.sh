@@ -16,7 +16,7 @@ PATH=$PATH:$BIN_PATH
 # Fonte Original: https://github.com/AdolfVonKleist/Phonetisaurus
 
 echo "Alinhamento de Diciónario (5min-10min):"
-LD_LIBRARY_PATH=$NIETTETTS_DEV/tools/g2p/lib/$ARCH/ phonetisaurus-align --input=models/full.dic --ofile=models/train_full.corpus --seq1_del=false --seq2_del=false --nbest=8 --mbr=true --iter=40 --grow=true --fb=true
+#LD_LIBRARY_PATH=$NIETTETTS_DEV/tools/g2p/lib/$ARCH/ phonetisaurus-align --input=models/full.dic --ofile=models/train_full.corpus --seq1_del=false --seq2_del=false --nbest=8 --mbr=true --iter=40 --grow=true --fb=true
 echo "Treinando modelo n-gram (5s-10s):" 
 estimate-ngram -wv vocab -o 6 -t models/train_full.corpus -wl /tmp/ngram.tmp
 rm /tmp/ngram.tmp

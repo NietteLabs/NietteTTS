@@ -86,7 +86,7 @@ Return pronunciation of word not in lexicon."
       (require 'INST_pt_lts_rules))
   (let ((dword (downcase word)) (phones) (syls))
 ;    (set! phones (lts_predict dword niettelabs_pt_lts_rules))
-	(set! tmpfile (make_tmp_filename))
+	      (set! tmpfile (make_tmp_filename))
         (set! tmpfile1 (make_tmp_filename))
         (set! g2p_model (path-append INST_pt_VOX::dir "festvox/g2p/model_g2p.fst"))
         (set! g2p_header (format nil "/usr/bin/echo -e 'WORD=%s\nMODEL_G2P=%s\nPHONE_FILE=%s' > %s" dword g2p_model tmpfile tmpfile1))
@@ -97,7 +97,8 @@ Return pronunciation of word not in lexicon."
               (set! phones (readfp fd))
               (fclose fd)
         )
-
+	(delete-file tmpfile)
+	(delete-file tmpfile1)
         (set! syls (INST_pt_lex_syllabify_phstress phones))
         (list word features syls)
   )
@@ -366,6 +367,7 @@ A postlexical rule form correcting phenomena over word boundaries."
 (INST_pt_addenda)
 (if (probe_file local_dic)
     (load local_dic))
+(delete-file tmpfile)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; Lexicon setup

@@ -7,7 +7,7 @@ for i in $(seq -w 1 1000); do
 N=$(echo "$i"p)
 FRASE=$(sed -n "$N" 1000-sentences-thls-dataset/sentence_utf8.txt)
 N=$(echo "$i - 1" | bc)
-echo "( F017-$N \"$FRASE\" )"
+echo "( F050-$N \"$FRASE\" )"
 done
 
 #cp 1000-sentences-thls-dataset/Sentences/*.wav Pieroni/wav
