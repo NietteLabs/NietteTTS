@@ -1,14 +1,16 @@
 #!/bin/bash
 
-for i in $(cat tools/utils.source); do
-echo $i
-export $i
-done
+git submodule update --init
 
 # Compilar ferramentas
 cd tools/
 bash setup.sh
 cd ..
+
+for i in $(cat tools/utils.source); do
+echo $i
+export $i
+done
 
 # Construir modelo G2P
 cd g2p
