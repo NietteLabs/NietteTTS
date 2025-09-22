@@ -11,8 +11,14 @@ INPUT_FILE=$1
 #MODEL_G2P
 #PHONE_FILE
 
-USER_DIR=/home/$USER/
+USER_DIR=/home/$USER
 DIC=$USER_DIR/.local/share/niettetts/dics/niettelabs_pt_addenda.scm
+
+# Criar pasta de dicionarios do NietteTTS caso não exista.
+if [ ! -d $(dirname $DIC) ]
+    then
+	mkdir "$(dirname $DIC)" -p
+fi
 
 # Atualizar dicionario com a nova palavra
 update_dic() {
@@ -52,3 +58,4 @@ else
     update_dic "$WORD" "$PHONES"
     echo "($PHONES)" >"$PHONE_FILE"
 fi
+
