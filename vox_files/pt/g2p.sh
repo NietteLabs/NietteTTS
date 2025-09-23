@@ -15,9 +15,8 @@ USER_DIR=/home/$USER
 DIC=$USER_DIR/.local/share/niettetts/dics/niettelabs_pt_addenda.scm
 
 # Criar pasta de dicionarios do NietteTTS caso não exista.
-if [ ! -d $(dirname $DIC) ]
-    then
-	mkdir "$(dirname $DIC)" -p
+if [ ! -d "$(dirname "$DIC")" ]; then
+    mkdir "$(dirname "$DIC")" -p
 fi
 
 # Atualizar dicionario com a nova palavra
@@ -58,4 +57,3 @@ else
     update_dic "$WORD" "$PHONES"
     echo "($PHONES)" >"$PHONE_FILE"
 fi
-
