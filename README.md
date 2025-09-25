@@ -1,19 +1,30 @@
-# NietteTTS
-NietteTTS é um MotorTTS (Text-To-Speech) que usar o software Festival Speech System para síntese de fala em Português Brasileiro (futuramente suporte a outros idiomas). Usasse o kit FestVoz para desenvolvimento das vozes com algumas modificações visando o melhorar a síntese.
-As vozes são desenvolvidas usando a técnica de síntese baseada em HMM.
+# O que é NietteTTS?
+NietteTTS é um MotorTTS (Text-To-Speech) que usar o software Festival Speech System para síntese de fala em Português Brasileiro (futuramente suporte a outros idiomas). Usando FestVoz (kit de desenvolvimento para novas vozes) com algumas modificações de extração de (MCEP, F0, STR) para obter melhores resultados na síntese, a técnica de síntese usando Hidden Markov Model (HMM) ou Modelos Ocultos Markov.
+Sendo a técnica baseada em HMM é a mesma usanda no RHVoice e HTK.
 
-# Observações 
-NietteTTS, é um projeto para Trabalho de Conclusão de Curso (TCC) sendo desenvolvindo unicamente por uma pessoa. 
-No futuro o código-fonte do NietteTTS será organizada em conjuto com sua documentação para ser usado por outras pessoas para desenvolvimento do NietteTTS e ao suporte de novo idiomas.
+Esse repositório, contém arquivos de suporte de idiomas, treinamento de modelo G2P, scripts modificados e novos para extração de MCEP, F0 e STR. As vozes feitas a partir desse projeto estão contidas na aba de *release*. 
 
-# Arquivos de Idioma:
+Esse projeto é um projeto de Trabalho de Conclusão de Curso (TCC) sendo desenvolvindo unicamente por uma pessoa. Futuramente o código-fonte do NietteTTS será organizado em conjuto com sua documentação para ser possível com outras desenvolverem novas vozes para NietteTTS, ao suporte de novos idiomas e melhorias gerais do NietteTTS.
 
+# Arquivos de Suporte de Idioma:
 | Idioma | Descrição |
 | ------------- | ------------- |
 | vox_files/pt  | Arquivo de Suporte de idioma do português brasileira |
 
 # Sobre Suporte ao Flite
-Alguns problemas durante o desenvolvimento das vozes para Flite ocorreram, como dificultades para imprementação do Phonetisaurus, normalização de texto e afins. Foi encerrando o desenvolvimento e focará apenas no Festival Speech System.
+Alguns problemas durante o desenvolvimento das vozes para Flite (Festival Lite) ocorreram, como dificultades para imprementação do Phonetisaurus, normalização de texto e entre outros. Foi encerrando o desenvolvimento e focará apenas no Festival Speech System.
+
+# Melhorias Futuras
+* Novos Idiomas
+    * Espanhol Latino
+    * Russo
+    * Alemão
+* Retiração de G2P usando Phonetisaurus
+    * imprementação de G2P usado Marian-MNT
+* Crianção automática de vozes usando GitHub Actions
+* Novas vozes usando grandes corporas de fala.
+* Pos-Tagger
+    * Pos-Tagger para obter melhores dados na geração de síntese. 
 
 # Documentação
-Para mais informações sobre as vozes do NietteTTS, instalação e com suas amostras de aúdio visite a Wiki do NietteLabs [clicando aqui](https://niettelabs.github.io/).
+Para mais informações sobre as vozes do NietteTTS, manual de instalação e com suas amostras de aúdio visite a Wiki do NietteLabs [clicando aqui](https://niettelabs.github.io/).
