@@ -6,7 +6,8 @@
 
 # Ubuntu
 echo "Instalando os pacotes necessários para as ferramentas"
-sudo apt-get install git build-essential libncurses5-dev sox cmake csh doxygen xsltproc graphviz git g++ autoconf-archive make libtool python3-setuptools python-dev-is-python3 python3-pip gfortran jq gawk libboost-all-dev python3-num2words
+sudo apt-get install git build-essential libncurses5-dev sox cmake csh doxygen xsltproc graphviz git g++ autoconf-archive make libtool python3-setuptools python-dev-is-python3 python3-pip gfortran jq gawk libboost-all-dev python3-num2words tcl8.6 tcl-snack
+
 # Pacotes python
 pip install sacrebleu jiwer --break-system-packages
 
@@ -16,13 +17,13 @@ export PATH=$PATH:/home/$USER/.local/bin
 wget http://festvox.org/packed/SPTK-3.6.tar.gz
 tar zxvf SPTK-3.6.tar.gz
 
-export ESTDIR=`pwd`/speech_tools
-export FESTVOXDIR=`pwd`/festvox
-export SPTKDIR=`pwd`/SPTK
+export ESTDIR=$(pwd)/speech_tools
+export FESTVOXDIR=$(pwd)/festvox
+export SPTKDIR=$(pwd)/SPTK
 
 # Compile source
 mkdir SPTK
-patch -p0 <festvox/src/clustergen/SPTK-3.6.patch 
+patch -p0 <festvox/src/clustergen/SPTK-3.6.patch
 cd SPTK-3.6
 ./configure --prefix=$SPTKDIR
 make
@@ -67,19 +68,18 @@ cd kenlm/
 mkdir build
 cd build
 cmake ../
-make 
+make
 sudo make install
 cd ../../
 
 ## Salva as variáveis das ferramentas em um arquivo
-echo "ESTDIR=$ESTDIR" >> utils.source
-echo "FESTVOXDIR=$FESTVOXDIR" >> utils.source
-echo "SPTKDIR=$SPTKDIR" >> utils.source
-echo "REAPER=`pwd`/REAPER/build/reaper" >> utils.source
-echo "NIETTETTS_DEV=$(cd ../ && pwd)" >> utils.source
+echo "ESTDIR=$ESTDIR" >>utils.source
+echo "FESTVOXDIR=$FESTVOXDIR" >>utils.source
+echo "SPTKDIR=$SPTKDIR" >>utils.source
+echo "REAPER=$(pwd)/REAPER/build/reaper" >>utils.source
+echo "NIETTETTS_DEV=$(cd ../ && pwd)" >>utils.source
 
 # Configurar corretamente o g2p
 mkdir g2p
 cp phonetisaurus-pypi/phonetisaurus/bin -r g2p/
 cp phonetisaurus-pypi/phonetisaurus/lib -r g2p/
-
