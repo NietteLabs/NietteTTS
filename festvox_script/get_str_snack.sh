@@ -141,8 +141,9 @@ cat $PROMPTFILE |
             ;;
         esac
 
-        echo $fname STR extraction with SNACK
+        echo $fname STR extraction with SNACK using $FILTERS
 
-        tclsh8.6 $NIETTETTS_DEV/festvox_script/get_str.tcl -H $F0MAX -L $F0MIN -f $FILTERS -n 5 -p $FRAMESHIFT -r $SAMPFREQ -s $FRAMELEN wav/$fname.wav | $X2X +aa -c 5 str/$fname.str
+#       tclsh8.6 $NIETTETTS_DEV/festvox_script/get_str.tcl -H $F0MAX -L $F0MIN -f $FILTERS -n 5 -p $FRAMESHIFT -r $SAMPFREQ -s $FRAMELEN wav/$fname.wav | $X2X +aa -c 5 > str/$fname.str
+        tclsh8.6 $NIETTETTS_DEV/festvox_script/get_str.tcl -H $F0MAX -L $F0MIN -f $FILTERS -n 5 -p $FRAMESHIFT -r $SAMPFREQ wav/$fname.wav | $X2X +aa -c 5 > str/$fname.str
 
     done
