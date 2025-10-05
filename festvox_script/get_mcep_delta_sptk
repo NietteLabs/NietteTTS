@@ -1,7 +1,28 @@
 #!/bin/bash
-# Obter MCEP (MGC) com delta usando SPTK-4.3
+#MIT License
+#Copyright (c) 2025 NietteLabs
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
 
-#Versão modificada do "bin/do_clustergen mcep_sptk", para isolamento e uso com SPTK-4.3
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
+# Get MCEP with DELTA, working in SPTK-4.9 (isolante of original script in bin/do_clustergen)
+# Modify for better extraction using this articles:
+# Simple Methods for Improving Speaker-Similarity of HMM-Based Speech Synthesis - Junichi Yamagishi, Simon King
+
 LANG=C
 export LANG
 
@@ -54,11 +75,6 @@ fi
 # so other parts of this script continue to work
 
 WINDOWTYPE=1
-# Values for calcule ALPHA for MCEP Extraction
-# ERB
-# BARK
-#Defalut for all is ERB
-SCALE_ALPHA=ERB
 NORMALIZE=1
 FFTLEN=4096
 LNGAIN=1
