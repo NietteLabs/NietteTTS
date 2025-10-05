@@ -22,3 +22,6 @@
 [submodule "tools/mitlm"]
 	path = tools/mitlm
 	url = https://github.com/mitlm/mitlm/
+[submodule "tools/SPTK"]
+	path = tools/SPTK
+	url = https://github.com/sp-nitech/SPTK

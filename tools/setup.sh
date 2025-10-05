@@ -13,22 +13,16 @@ pip install sacrebleu jiwer --break-system-packages
 
 # Export PATH
 export PATH=$PATH:/home/$USER/.local/bin
-
-wget http://festvox.org/packed/SPTK-3.6.tar.gz
-tar zxvf SPTK-3.6.tar.gz
-
 export ESTDIR=$(pwd)/speech_tools
 export FESTVOXDIR=$(pwd)/festvox
-export SPTKDIR=$(pwd)/SPTK
+export SPTKDIR=$(pwd)/SPTK/build/
 
 # Compile source
-mkdir SPTK
-patch -p0 <festvox/src/clustergen/SPTK-3.6.patch
-cd SPTK-3.6
-./configure --prefix=$SPTKDIR
-make
-make install
-cd ..
+mkdir SPTK/build
+cd SPTK/build
+cmake ../
+make -j$(nproc)
+cd ../../
 
 cd speech_tools
 ./configure
@@ -53,7 +47,7 @@ cd REAPER
 mkdir build
 cd build
 cmake ..
-make
+make -j$(nproc)
 cd ../../
 echo "REAPER baixado e compilador com sucesso"
 
@@ -68,7 +62,7 @@ cd kenlm/
 mkdir build
 cd build
 cmake ../
-make
+make -j$(nproc)
 sudo make install
 cd ../../
 
