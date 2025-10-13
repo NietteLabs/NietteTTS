@@ -4,12 +4,6 @@
 [submodule "tools/speech_tools"]
 	path = tools/speech_tools
 	url = https://github.com/festvox/speech_tools
-[submodule "tools/festival"]
-	path = tools/festival
-	url = https://github.com/festvox/festival
-[submodule "tools/festvox"]
-	path = tools/festvox
-	url = https://github.com/festvox/festvox
 [submodule "tools/phonetisaurus-pypi"]
 	path = tools/phonetisaurus-pypi
 	url = https://github.com/rhasspy/phonetisaurus-pypi/
@@ -25,3 +19,9 @@
 [submodule "tools/SPTK"]
 	path = tools/SPTK
 	url = https://github.com/sp-nitech/SPTK
+[submodule "tools/festvox"]
+	path = tools/festvox
+	url = https://github.com/NietteLabs/festvox
+[submodule "tools/festival"]
+	path = tools/festival
+	url = https://github.com/NietteLabs/festival
