@@ -28,3 +28,7 @@ Alguns problemas durante o desenvolvimento das vozes para Flite (Festival Lite) 
 
 # Documentação
 Para mais informações sobre as vozes do NietteTTS, manual de instalação e com suas amostras de aúdio visite a Wiki do NietteLabs [clicando aqui](https://niettelabs.github.io/).
+
+# Monografia do Projeto
+
+A monografia com o processo de criação do NietteTTS e outras informações no desenvolvimento estão disponivél em [monografia.pdf](https://github.com/NietteLabs/NietteTTS/blob/main/monografia.pdf)
