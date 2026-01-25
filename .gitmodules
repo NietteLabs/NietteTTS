@@ -4,9 +4,6 @@
 [submodule "tools/speech_tools"]
 	path = tools/speech_tools
 	url = https://github.com/festvox/speech_tools
-[submodule "tools/phonetisaurus-pypi"]
-	path = tools/phonetisaurus-pypi
-	url = https://github.com/rhasspy/phonetisaurus-pypi/
 [submodule "tools/REAPER"]
 	path = tools/REAPER
 	url = https://github.com/google/REAPER
@@ -25,3 +22,6 @@
 [submodule "tools/festival"]
 	path = tools/festival
 	url = https://github.com/NietteLabs/festival
+[submodule "tools/Phonetisaurus"]
+	path = tools/Phonetisaurus
+	url = https://github.com/NietteLabs/Phonetisaurus/

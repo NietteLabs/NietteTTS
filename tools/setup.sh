@@ -66,14 +66,16 @@ make -j$(nproc)
 sudo make install
 cd ../../
 
+cd Phonetisaurus
+make clean
+./configure --enable-static --disable-shared
+make -j(nproc)
+sudo make install
+cd ../
+
 ## Salva as variáveis das ferramentas em um arquivo
 echo "ESTDIR=$ESTDIR" >>utils.source
 echo "FESTVOXDIR=$FESTVOXDIR" >>utils.source
 echo "SPTKDIR=$SPTKDIR" >>utils.source
 echo "REAPER=$(pwd)/REAPER/build/reaper" >>utils.source
 echo "NIETTETTS_DEV=$(cd ../ && pwd)" >>utils.source
-
-# Configurar corretamente o g2p
-mkdir g2p
-cp phonetisaurus-pypi/phonetisaurus/bin -r g2p/
-cp phonetisaurus-pypi/phonetisaurus/lib -r g2p/
