@@ -9,7 +9,9 @@ echo "Instalando os pacotes necessários para as ferramentas"
 sudo apt-get install git build-essential libncurses5-dev sox cmake csh doxygen xsltproc graphviz git g++ autoconf-archive make libtool python3-setuptools python-dev-is-python3 python3-pip gfortran jq gawk libboost-all-dev python3-num2words tcl8.6 tcl-snack
 
 # Pacotes python
-pip install sacrebleu jiwer --break-system-packages
+python3 -m venv ../.niettetts-venv
+source ../.niettetts-venv/bin/activate
+pip install sacrebleu jiwer
 
 # Export PATH
 export PATH=$PATH:/home/$USER/.local/bin
