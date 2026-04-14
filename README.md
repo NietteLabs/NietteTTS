@@ -1,14 +1,14 @@
 # English Version of README
-English version of README is avaliable in [README_en.md](https://github.com/NietteLabs/NietteTTS/README_en.md)
+English version of README is avaliable in [README_en.md](https://github.com/PallasSpeechSystem/Fest-TTS/README_en.md)
 
-# O que é NietteTTS?
-NietteTTS é um MotorTTS (Text-To-Speech) que usar o software Festival Speech Synthesis System para síntese de fala em Português Brasileiro (futuramente suporte a outros idiomas). Usando FestVoz (kit de desenvolvimento para novas vozes) com algumas modificações de extração de (MCEP, F0, STR) para obter melhores resultados na síntese, a técnica de síntese usando Hidden Markov Model (HMM) ou Modelos Ocultos Markov. Sendo a técnica baseada em HMM é a mesma usanda no RHVoice e HTK.
+# O que é Fest-TTS?
+Fest-TTS é um MotorTTS (Text-To-Speech) que usar o software Festival Speech Synthesis System para síntese de fala em Português Brasileiro (futuramente suporte a outros idiomas). Usando FestVoz (kit de desenvolvimento para novas vozes) com algumas modificações de extração de (MCEP, F0, STR) para obter melhores resultados na síntese, a técnica de síntese usando Hidden Markov Model (HMM) ou Modelos Ocultos Markov. Sendo a técnica baseada em HMM é a mesma usanda no RHVoice e HTK.
 
 Esse repositório, contém arquivos de suporte de idiomas, treinamento de modelo G2P, scripts modificados e novos para extração de MCEP, F0 e STR. As vozes feitas a partir desse projeto estão contidas na aba de *release*. 
 
-Esse projeto é um projeto de Trabalho de Conclusão de Curso (TCC) sendo desenvolvindo unicamente por uma pessoa. Futuramente o código-fonte do NietteTTS será organizado em conjuto com sua documentação para ser possível com outras desenvolverem novas vozes para NietteTTS, ao suporte de novos idiomas e melhorias gerais do NietteTTS.
+Esse projeto é um projeto de Trabalho de Conclusão de Curso (TCC) sendo desenvolvindo unicamente por uma pessoa. Futuramente o código-fonte do Fest-TTS será organizado em conjuto com sua documentação para ser possível com outras desenvolverem novas vozes para Fest-TTS, ao suporte de novos idiomas e melhorias gerais do Fest-TTS.
 
-# Arquivos de Suporte de Idioma:
+\# Arquivos de Suporte de Idioma:
 | Idioma | Descrição |
 | ------------- | ------------- |
 | vox_files/pt  | Arquivo de suporte de idioma do português brasileiro |
@@ -28,8 +28,9 @@ Alguns problemas durante o desenvolvimento das vozes para Flite (Festival Lite) 
     * Pos-Tagger para obter melhores dados na geração de síntese. 
 
 # Documentação
-Para mais informações sobre as vozes do NietteTTS, manual de instalação e com suas amostras de aúdio visite a Wiki do NietteLabs [clicando aqui](https://niettelabs.github.io/).
+Para mais informações sobre as vozes do Fest-TTS, manual de instalação e com suas amostras de aúdio visite a Wiki do PallasSpeechSystem [clicando aqui](https://pallasspeechsystem.github.io/).
 
 # Monografia do Projeto
 
-A monografia com o processo de criação do NietteTTS e outras informações no desenvolvimento estão disponivél em [monografia.pdf](https://github.com/NietteLabs/NietteTTS/blob/main/monografia.pdf)
+A monografia com o processo de criação do Fest-TTS e outras informações no desenvolvimento estão disponivél em [monografia.pdf](https://github.com/PallasSpeechSystem/Fest-TTS/blob/main/monografia.pdf)
+

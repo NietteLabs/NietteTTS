@@ -4,5 +4,5 @@ Architecture: amd64
 Maintainer: $user <$email>
 Depends: festival, python3-num2words, gawk
 Priority: optional
-Homepage: https://github.com/NietteLabs/NietteTTS
+Homepage: https://github.com/PallasSpeechSystem/Fest-TTS
 Description: $des
